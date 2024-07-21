@@ -1,9 +1,13 @@
-# Crane Maintenance Prediction Using Machine Learning
+# Machine Learning Projects
 
 ## Project Overview
-This project focuses on predicting whether maintenance is required for cranes based on various operational and environmental factors. The project utilizes a Support Vector Machine (SVM) classifier to analyze the data and make predictions, ensuring efficient and timely maintenance.
+This repository contains the following machine learning projects: 
+1. Predicting crane maintenance requirements based on various operational and environmental factors.
+2. Predicting diabetes based on health metrics.
 
-## Feature Descriptions and Ranges
+## Project 1: Crane Maintenance Prediction
+
+### Feature Descriptions and Ranges
 - **Crane_ID**: ID for each crane (Range: 1-10)
 - **Ambient_Temperature**: Temperature around the crane (Range: 0°C-50°C)
 - **Humidity**: Environmental humidity level (Range: 30%-90%)
@@ -24,26 +28,31 @@ This project focuses on predicting whether maintenance is required for cranes ba
 - **Number_of_Past_Failures**: Past failures (Range: 0-9)
 - **Maintenance_Frequency**: Annual maintenance occurrences (Range: 1-12)
 
-### Maintenance Conditions:
+### Maintenance Conditions
 - **Motor Current**: Maintenance needed if >375 Amps.
 - **Hydraulic Pressure & Oil Level**: Maintenance needed if pressure >2250 psi and oil level <25%.
 - **Crane Age**: Maintenance needed if age >15 years.
 - **Past Failures**: Maintenance needed if failures >7.
 - **Usage & Maintenance Frequency**: Maintenance needed if usage is daily and frequency <4 times/year.
 
-## Implementation Details
+### Implementation Details
+1. **Data Preprocessing**: Standardized the data using `StandardScaler`.
+2. **Model Training**: Used an SVM classifier with a linear kernel.
+3. **Model Evaluation**: Calculated accuracy on both training and testing data.
+4. **Prediction**: Developed a system to predict maintenance requirements for new data.
 
-### Data Preprocessing
-- Standardized the data to a common range using `StandardScaler`.
-- Split the data into training and testing sets using `train_test_split`.
+### Results
+- **Training Data Accuracy**: 83.93% 
+- **Testing Data Accuracy**: 84.66% 
 
-### Model Training
-- Used a Support Vector Machine (SVM) classifier with a linear kernel.
-- Trained the model on the training data and evaluated its accuracy on both training and testing data.
+## Project 2: Diabetes Prediction
 
-### Prediction
-- Implemented a function to predict whether maintenance is required based on new input data.
+### Implementation Details
+1. **Data Preprocessing**: Standardized the data using `StandardScaler`.
+2. **Model Training**: Used an SVM classifier with a linear kernel.
+3. **Model Evaluation**: Calculated accuracy on both training and testing data.
+4. **Prediction**: Developed a system to predict diabetes for new data.
 
-## Results
-- **Training Data Accuracy**: 83.93%
-- **Testing Data Accuracy**: 84.66%
+### Results
+- **Training Data Accuracy**: 78.66% 
+- **Testing Data Accuracy**: 77.27% 
